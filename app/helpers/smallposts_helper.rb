@@ -1,0 +1,2 @@
+module SmallpostsHelper
+end

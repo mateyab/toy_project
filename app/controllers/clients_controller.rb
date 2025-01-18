@@ -8,11 +8,13 @@ class ClientsController < ApplicationController
 
   # GET /clients/1 or /clients/1.json
   def show
+    @client = Client.find(params[:id])
+    @smallpost = @client.smallposts.first
   end
 
   # GET /clients/new
   def new
-    @client = Client.new
+    @client = Client.new          
   end
 
   # GET /clients/1/edit

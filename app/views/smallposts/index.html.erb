@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Smallposts" %>
+
+<h1>Smallposts</h1>
+
+<div id="smallposts">
+  <% @smallposts.each do |smallpost| %>
+    <%= render smallpost %>
+    <p>
+      <%= link_to "Show this smallpost", smallpost %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New smallpost", new_smallpost_path %>

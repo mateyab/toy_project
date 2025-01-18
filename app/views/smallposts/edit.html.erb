@@ -1,0 +1,12 @@
+<% content_for :title, "Editing smallpost" %>
+
+<h1>Editing smallpost</h1>
+
+<%= render "form", smallpost: @smallpost %>
+
+<br>
+
+<div>
+  <%= link_to "Show this smallpost", @smallpost %> |
+  <%= link_to "Back to smallposts", smallposts_path %>
+</div>

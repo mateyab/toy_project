@@ -1,6 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @client %>
+<% if @smallpost %> 
+  <p>
+    <strong>Post:</strong>
+    <%= @smallpost.content %>
+  </p>
+<% end %>
 
 <div>
   <%= link_to "Edit this client", edit_client_path(@client) %> |

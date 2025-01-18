@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @smallpost %>
+
+<div>
+  <%= link_to "Edit this smallpost", edit_smallpost_path(@smallpost) %> |
+  <%= link_to "Back to smallposts", smallposts_path %>
+
+  <%= button_to "Destroy this smallpost", @smallpost, method: :delete %>
+</div>
