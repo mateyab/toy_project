@@ -4,6 +4,14 @@ class SmallpostsController < ApplicationController
   # GET /smallposts or /smallposts.json
   def index
     @smallposts = Smallpost.all
+
+    if params[:order] == "asc"
+      @smallposts = @smallposts.order(content: :asc,)
+    elsif params[:order] == "desc"
+      @smallposts = @smallposts.order(content: :desc)
+    elsif params[:order] == "date"
+      @smallposts = @smallposts.order(:id)
+    end
   end
 
   # GET /smallposts/1 or /smallposts/1.json
