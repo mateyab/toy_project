@@ -8,7 +8,7 @@ class SmallpostsController < ApplicationController
     elsif params[:order] == "desc"
       @smallposts = Smallpost.order(content: :desc)
     elsif params[:order] == "date"
-      @smallposts = Smallpost.order(:id)
+      @smallposts = Smallpost.order(created_at: :asc)
     else
       @smallposts = Smallpost.all
     end
@@ -73,6 +73,6 @@ class SmallpostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def smallpost_params
-      params.expect(smallpost: [ :content, :client_id ])
+      params.expect(smallpost: [ :content, :client_id, :order ])
     end
 end
