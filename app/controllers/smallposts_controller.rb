@@ -3,7 +3,7 @@ class SmallpostsController < ApplicationController
 
   # GET /smallposts or /smallposts.json
   def index
-    @smallposts = Smallpost.all
+    @smallposts = Smallpost.content_order(params[:order])
   end
 
   # GET /smallposts/1 or /smallposts/1.json

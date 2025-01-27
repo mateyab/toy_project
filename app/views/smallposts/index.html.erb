@@ -3,6 +3,9 @@
 <% content_for :title, "Smallposts" %>
 
 <h1>Smallposts</h1>
+<%= link_to "Ascending", smallposts_path(order: 'asc')%>
+<%= link_to "Descending", smallposts_path(order: 'desc')%>
+<%= link_to "Chronological", smallposts_path(order: 'date')%>
 
 <div id="smallposts">
   <% @smallposts.each do |smallpost| %>
