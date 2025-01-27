@@ -65,6 +65,6 @@ class SmallpostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def smallpost_params
-      params.expect(smallpost: [ :content, :client_id ])
+      params.expect(smallpost: [ :content, :client_id, :order ])
     end
 end
