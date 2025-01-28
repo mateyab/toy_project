@@ -17,7 +17,7 @@ class SmallpostsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create smallpost" do
     assert_difference("Smallpost.count") do
-      post smallposts_url, params: { smallpost: { client_id: @smallpost.client_id, content: @smallpost.content } }
+      post smallposts_url, params: { smallpost: { client_id: clients(:one).id, content: @smallpost.content } }
     end
 
     assert_redirected_to smallpost_url(Smallpost.last)
